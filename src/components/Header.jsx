@@ -1,56 +1,66 @@
-import React, { useState } from "react";
-import { Menu, X } from "lucide-react"; // Icons for hamburger and close
-import logo from "../assets/logo.png";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
-const Header = () => {
+const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
-    <header className="bg-blue-900 text-white py-4 shadow-md sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center px-6">
-        {/* Logo and Brand Name */}
-        <div className="flex items-center space-x-4">
-          <img
-            src={logo}
-            alt="Aarti Fabrication Logo"
-            className="h-12 w-12 rounded-full object-cover"
-          />
-          <h1 className="text-2xl md:text-3xl font-bold">Aarti Fabrication</h1>
+    <nav className="bg-white shadow-md fixed w-full z-50">
+      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo */}
+        <div className="text-2xl font-extrabold text-indigo-600">
+          Aarti<span className="text-gray-800">Fabrication</span>
         </div>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 text-lg font-medium">
-          <a href="#home" className="hover:text-yellow-300 transition">Home</a>
-          <a href="#about" className="hover:text-yellow-300 transition">About</a>
-          <a href="#services" className="hover:text-yellow-300 transition">Services</a>
-          <a href="#gallery" className="hover:text-yellow-300 transition">Gallery</a>
-          <a href="#contact" className="hover:text-yellow-300 transition">Contact</a>
-        </nav>
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex gap-8 font-medium text-gray-700">
+          {["Home", "About", "Services", "Projects", "Contact"].map((item) => (
+            <li
+              key={item}
+              className="hover:text-indigo-600 transition-all cursor-pointer"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+
+        {/* CTA Button */}
+        <button className="hidden md:block bg-indigo-600 text-white px-5 py-2 rounded-full hover:bg-indigo-700 shadow-md transition">
+          Get a Quote
+        </button>
 
         {/* Mobile Toggle */}
-        <button
-          className="md:hidden focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Menu"
-        >
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        <div className="md:hidden">
+          <button onClick={toggleMenu}>
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-6 pb-4">
-          <nav className="flex flex-col space-y-2 text-lg font-medium">
-            <a href="#home" onClick={() => setIsOpen(false)} className="hover:text-yellow-300 transition">Home</a>
-            <a href="#about" onClick={() => setIsOpen(false)} className="hover:text-yellow-300 transition">About</a>
-            <a href="#services" onClick={() => setIsOpen(false)} className="hover:text-yellow-300 transition">Services</a>
-            <a href="#gallery" onClick={() => setIsOpen(false)} className="hover:text-yellow-300 transition">Gallery</a>
-            <a href="#contact" onClick={() => setIsOpen(false)} className="hover:text-yellow-300 transition">Contact</a>
-          </nav>
+        <div className="md:hidden bg-white border-t shadow-sm">
+          <ul className="flex flex-col space-y-4 px-6 py-4 font-medium text-gray-700">
+            {["Home", "About", "Services", "Projects", "Contact"].map((item) => (
+              <li
+                key={item}
+                className="hover:text-indigo-600 cursor-pointer"
+              >
+                {item}
+              </li>
+            ))}
+            <li>
+              <button className="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-full transition">
+                Get a Quote
+              </button>
+            </li>
+          </ul>
         </div>
       )}
-    </header>
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;
