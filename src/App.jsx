@@ -5,9 +5,11 @@ import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
 import ProductsSection from "./components/ProductSection";
-import GallerySection from "./components/GallerySection";
+
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import CallNowSection from "./components/CallNowSection";
+import TestimonialsSection from "./components/TestimonialsSection"
 
 
 
@@ -17,9 +19,10 @@ const App = () => {
     <Header />
     <HeroSection></HeroSection>
     <ProductsSection></ProductsSection>
+    <CallNowSection />
     <AboutSection/>
     
-    <GallerySection></GallerySection>
+    <TestimonialsSection/>
     <ContactSection></ContactSection>
     <Footer></Footer>
     </>
