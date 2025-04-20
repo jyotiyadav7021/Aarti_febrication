@@ -16,8 +16,9 @@ const App = () => {
     <>
     <Header />
     <HeroSection></HeroSection>
-    <AboutSection/>
     <ProductsSection></ProductsSection>
+    <AboutSection/>
+    
     <GallerySection></GallerySection>
     <ContactSection></ContactSection>
     <Footer></Footer>
