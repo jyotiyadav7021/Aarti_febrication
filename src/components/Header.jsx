@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from '../assets/logo.png';
 
-const navItems = ["Home", "About", "Products", "Gallery", "Contact"];
+const navItems = ["Home", "About", "Products", "Testimonials", "Contact"];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,10 +10,10 @@ export default function Header() {
   return (
     <>
       {/* HEADER */}
-      <header className="bg-white shadow-md sticky top-0 z-50">
-        <div className="w-full relative flex items-center justify-between px-4 py-4 md:py-6">
+      <header className="bg-white shadow-md sticky top-0 z-50 w-full">
+        <div className="relative flex items-center justify-between px-4 py-4 md:py-6">
           {/* Logo Floating on Left */}
-          <div className="absolute bottom-[-40px] left-4 z-40">
+          <div className="absolute -bottom-20 left-4 z-40">
             <img
               src={Logo}
               alt="Logo"
@@ -21,7 +21,7 @@ export default function Header() {
             />
           </div>
 
-          {/* Navigation Links */}
+          {/* Navigation */}
           <nav className="ml-auto hidden md:flex space-x-6 text-sm font-medium">
             {navItems.map((item) => (
               <a
@@ -34,7 +34,7 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Hamburger for Mobile */}
+          {/* Hamburger Menu */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 ml-auto"
@@ -43,7 +43,7 @@ export default function Header() {
             {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
 
-          {/* Mobile Nav */}
+          {/* Mobile Navigation */}
           <nav className={`${menuOpen ? "block" : "hidden"} w-full md:hidden mt-4`}>
             <ul className="flex flex-col space-y-2 text-sm font-medium bg-white p-4 rounded-lg shadow">
               {navItems.map((item) => (
@@ -60,6 +60,7 @@ export default function Header() {
           </nav>
         </div>
       </header>
+
 
       {/* Spacer below header for logo */}
       <div className="h-24 md:h-28"></div>

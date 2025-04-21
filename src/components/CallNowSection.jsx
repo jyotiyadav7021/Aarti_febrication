@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CallNowSection() {
   return (
-    <section className="bg-white py-10 text-center relative z-20">
+    <section id="contact" className="bg-white py-10 text-center relative z-20">
       <h3 className="text-2xl md:text-3xl font-extrabold text-orange-600">
         CALL NOW - 87708-26266
       </h3>
