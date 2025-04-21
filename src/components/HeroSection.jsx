@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative w-full h-screen flex items-center justify-center"
+      className="relative w-full h-screen flex items-center  justify-center"
     >
       {/* Full Background Image */}
       <img

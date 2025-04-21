@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="bg-black text-white py-12 px-6 md:px-20 grid md:grid-cols-4 gap-10">
+    <div className="bg-gray-800 text-white py-12 px-6 md:px-20 grid md:grid-cols-4 gap-10">
       
       {/* CONTACT US */}
       <div>
@@ -13,19 +13,19 @@ const ContactSection = () => {
             <p className="font-bold text-white flex items-center">
               📍 Location
             </p>
-            <p>1/3 Chhipa Bakhal, Indore,<br />Madhya Pradesh 452002 India</p>
+            <p>Malad(East),Maharastra<br />Maharastra 400097</p>
           </div>
           <div>
             <p className="font-bold text-white flex items-center">
               📞 Call Us Now
             </p>
-            <p>87708-26266</p>
+            <p>9594597732</p>
           </div>
           <div>
             <p className="font-bold text-white flex items-center">
               🕒 Opening Hours
             </p>
-            <p>Mon – Sat 10:00AM to 6:00PM</p>
+            <p>Mon – Sat 10:00AM to 8:00PM</p>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ export default function Header() {
     <>
       {/* HEADER */}
       <header className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto relative flex items-center justify-between px-4 py-4 md:py-6">
+        <div className="w-full relative flex items-center justify-between px-4 py-4 md:py-6">
           {/* Logo Floating on Left */}
           <div className="absolute bottom-[-40px] left-4 z-40">
             <img
