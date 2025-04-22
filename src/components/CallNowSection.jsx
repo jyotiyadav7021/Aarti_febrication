@@ -7,7 +7,7 @@ export default function CallNowSection() {
         CALL NOW - 7021508692
       </h3>
       <p className="mt-2 text-lg font-semibold text-gray-800">
-        To get affordable On-Site Fabrication Services in Indore
+        To get affordable On-Site Fabrication Services in Maharastra
       </p>
     </section>
   );
