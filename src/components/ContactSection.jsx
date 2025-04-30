@@ -56,7 +56,7 @@ const ContactSection = () => {
           className="w-full p-2 text-black rounded mb-4"
         />
         <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded w-full">
-          SUBSCRIBE NOW
+          Contact us 
         </button>
       </div>
 
