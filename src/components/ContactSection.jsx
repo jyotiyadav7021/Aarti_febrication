@@ -25,7 +25,7 @@ const ContactSection = () => {
             <p className="font-bold text-white flex items-center">
               🕒 Opening Hours
             </p>
-            <p>Mon – Sat 10:00AM to 8:00PM</p>
+            <p>Mon – Sat </p>
           </div>
         </div>
       </div>
